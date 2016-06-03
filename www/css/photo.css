@@ -1,0 +1,8 @@
+/* This is a CSS file */
+#sec1 #content .photoBtns { width:300px; display: flex;justify-content: space-between; padding:10px; }
+#sec1 #content .photoBtns > div { width:140px; height: 140px; text-align: center; border-radius: 100%; }
+#sec1 #content .photoBtns > div img { width:40%; }
+#sec1 #content .photoBtns > div:first-child {background-color:#ff495a; }
+#sec1 #content .photoBtns > div:last-child {background-color: #0099d0; }
+#sec1 #content > div:nth-child(2) { width:100%;background-color:#4CA100; padding:10px; text-align: center; display: flex; flex-direction: column; justify-content: center; } 
+
