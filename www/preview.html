@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/preview.css">
+    <script src="components/loader.js"></script>
+    <script src="js/preview.js"></script>
+    <script>
+        
+        document.addEventListener("deviceready", onDeviceReady, false);
+        
+        function onDeviceReady() {
+            console.log("PhoneGap is ready");
+            document.getElementById("picture").setAttribute("src", "http://nnanyo.slit.co.kr/data/file/dataTbl/"+localStorage.getItem('img'));
+            navigator.notification.alert("배경색을 지정해 주세요",alertDismissed,"NNANYO.COM"," 확 인 ");
+        }    
+        
+        
+    </script>
+</head>
+<body>
+     
+     <section id="sec1">
+        <div id="content">
+            <h1 class="text-center"><img src="img/text_02.png" width="70%" /></h1>  
+            <div id="setColor">
+              <ul>
+                <li value="#649900">&nbsp;</li>
+                <li value="#003467">&nbsp;</li>
+                <li value="#3099CD">&nbsp;</li>
+                <li value="#FE6766">&nbsp;</li>
+                <li value="#000001">&nbsp;</li>
+              </ul>
+            </div>
+            <div>
+                <div>
+                    <div id="imageDiv">
+                        <img id="picture" src="img/icon04.png"  />
+                    </div>
+                    
+                    <div id="mask">
+                        <div></div>
+                        <div><img src="img/black.png" width="300px" /></div>
+                        <div></div>
+                    </div>
+                    <div>
+                       <p id="iName">홍길동</p>
+                       <p id="iBirth_n_Sex">2016년 12월생 (남)</p>
+                       <p id="iInfo"></p>
+                        <div>
+                            <div><i class="fa fa-phone" aria-hidden="true"></i></div><div><a href="tel:" id="call1" class="call">엄마에게 전화걸기</a></div>
+                       </div>
+                       <div class="call2">
+                            <div><i class="fa fa-phone" aria-hidden="true"></i></div><div><a href="tel:" id="call2" class="call">아빠에게 전화걸기</a></div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+             <div class="btns">
+               
+                <ons-button class="button" id="submitBtn"><i class="fa fa-check" aria-hidden="true"></i> 등록 </ons-button>
+                <ons-button class="button" id="backBtn"><i class="fa fa-chevron-left" aria-hidden="true"></i> 이전 </ons-button>
+                   
+            </div>
+            <div><img src="img/copy.png" width="80%" /></div>
+        </div>
+    </section>
+</body>
+</html>

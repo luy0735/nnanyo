@@ -1,0 +1,25 @@
+/* This is a CSS file */
+#sec1 #content { min-height: 230px !important;display:flex;justify-content: center; }
+#sec1 #content h1 { margin-top:100px; }
+#sec1 #content #formBox { width:300px; min-height: 160px; background-color:#FFF; border-radius: 20px;padding:20px; }
+#sec1 #content #formBox a.button { width:100%; height: 100px; line-height: 90px; font-size:1.2em; text-align: center; border-radius: 20px;}
+
+#sec1 > div:last-child { width:100%; text-align: center;}
+#sec1 > div:last-child > img { width:50%; }
+#sec1 > div:nth-child(2) { text-align: center; position: relative; top:20px;  }
+#sec1 > div:nth-child(2) > img { width:70%; }
+
+#sec1 #formBox { width:310px;margin:20px auto 80px; padding:10px; background-color:#FFF; min-height: 300px; border-radius: 20px; position: relative; top:20px; }
+#sec1 #formBox > div:first-child > div:first-child  div {width:30px !important; height: 30px; line-height: 30px; text-align: center; border-radius: 50%; background-color:#4CA200; color:#FFF; display: inline-block; }
+#sec1 #formBox > div:first-child > div:first-child  div i { font-weight: 600; }
+#sec1 #formBox > div:first-child > div:first-child  span { font-size:20px; font-weight: 600; line-height: 30px; }
+#sec1 #formBox > div:first-child > p:first-of-type { margin-bottom: 30px; }
+#sec1 #formBox > div:first-child > p:last-child { color:#FF5900; margin-bottom: 50px; }
+
+#sec1 #formBox div.btns { margin:0 auto; text-align: center; position: relative; top:-40px; }
+#sec1 #formBox div.btns2 { width:100%; margin-bottom: 20px; text-align: center; position: relative; top:-20px; }
+#sec1 #formBox div.btns2 a.button { width:260px;height:60px; line-height: 58px; border-radius: 10px; }
+#submitBtn { background-color:#1481B9; height: 60px; line-height: 58px; border-radius: 10px; }
+#backBtn { background-color:#DB3543; height: 60px; line-height: 58px; border-radius: 10px; }
+
+#sec1 > div:nth-child(4) { position: relative;bottom: 10px; margin-top:20px; }

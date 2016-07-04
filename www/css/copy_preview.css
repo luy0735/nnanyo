@@ -1,0 +1,43 @@
+/* This is a CSS file */
+body { background-color:#FFF; }
+#sec1 #content #setColor { width: 100%; text-align: center; }
+#sec1 #content #setColor ul { list-style: none; width: 260px; display: flex; display:-webkit-flex; justify-content: space-between;margin:0 auto; }
+#sec1 #content #setColor ul li { width: 40px !important; height: 40px; border-radius: 50%; display: inline-block; }
+#sec1 #content #setColor ul li:first-child { background-color:#649900; }
+#sec1 #content #setColor ul li:nth-child(2) { background-color:#003467; }
+#sec1 #content #setColor ul li:nth-child(3) { background-color:#3099CD; }
+#sec1 #content #setColor ul li:nth-child(4) { background-color:#FE6766; }
+#sec1 #content #setColor ul li:last-child { background-color:#000001; }
+
+#sec1 #content > div:nth-of-type(2) {width:100%;margin-top:40px;text-align: center; z-index:3; }
+#sec1 #content > div:nth-of-type(2) > div:first-child { width:100%; height: 40px; background-color:#000;position: relative;z-index:99; }
+#sec1 #content > div:nth-of-type(2) > div:nth-child(2) { height: 300px; display: flex; justify-content: space-between; }
+#sec1 #content > div:nth-of-type(2) > div:nth-child(2) > div:first-child { width:10%; height:300px; background-color:#000;position:relative;z-index:99; float:left;  }
+#sec1 #content > div:nth-of-type(2) > div:nth-child(2) > div:nth-child(2) { width:80%; height:300px; text-align: center; float:left;position: relative;z-index:99; }
+#sec1 #content > div:nth-of-type(2) > div:nth-child(2) > div:last-child { width:10%; height:300px; background-color:#000; float:left; }
+#sec1 #content > div:nth-of-type(2) > div:last-child { width:100%; height: 20px; background-color:#000; clear:left; }
+
+#sec1 #content > div:nth-of-type(3) {position: relative;top:-400px; width:100%; margin-top:40px; background-color:#000; padding-top:40px;padding-bottom: 40px; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+#sec1 #content > div:nth-of-type(3) img {  height: 280px;  }
+
+#sec1 #content > div:nth-of-type(4) {width:100%; text-align: center; position: relative;margin-top:-410px; background-color:#000; color:#fff;padding:40px 0; }
+#sec1 #content > div:nth-of-type(4) p,#sec1 #content div:nth-of-type(4) div { margin:0 auto; }
+#sec1 #content > div:nth-of-type(4) p { height: 40px; line-height: 38px; }
+#sec1 #content > div:nth-of-type(4) #iName { font-size:3em; font-weight: 600; }
+#sec1 #content > div:nth-of-type(4) #iInfo { font-size: 1.2em; font-weight: normal;color:#000;  margin-bottom: 20px; min-height: 200px; overflow: auto;width:280px; padding:10px; background-color:#FFF; border-radius: 10px;}
+#sec1 #content > div:nth-of-type(4) > div { height: 60px; line-height: 58px; width:80%; border-radius: 60px;background-color:#FFF; font-size: 1.2em; margin-bottom: 30px; }
+#sec1 #content > div:nth-of-type(4) > div  { width:80%; margin:10px auto; display: flex; justify-content: space-between; align-items:center; }
+#sec1 #content > div:nth-of-type(4) > div:first-of-type { margin-bottom: 30px; }
+#sec1 #content > div:nth-of-type(4) > div > div:first-child { width:10%; padding-left:10px; float:left; display: inline-block;  }
+#sec1 #content > div:nth-of-type(4) > div > div:first-child i { width:45px; height: 45px; background-color:#000;color:#FFF; border-radius: 45px; line-height: 43px; }
+#sec1 #content > div:nth-of-type(4) > div > div:last-child { width:89%;  }
+#sec1 #content > div:nth-of-type(4) > div > div:last-child a { text-decoration: none; color:#111; }
+
+#sec1 #content > div:nth-of-type(5) { margin-top:40px; text-align: center; clear: left; }
+#sec1 #content > div:nth-of-type(5) ons-button { width:140px;height: 50px; line-height: 40px; font-size:1.2em; text-align: center; border-radius: 10px; margin-right: 10px;}
+#sec1 #content > div:nth-of-type(5) #backBtn { background-color:#eb482f;}
+#sec1 #content > div:nth-of-type(5) #backBtn:hover { -webkit-transition:none;-moz-transition:none; -o-transition:none; transition: none; }
+#sec1 #content > div:nth-of-type(5) #backBtn:active { background-color:#eb482f; -webkit-transition:none; -moz-transition:none; -o-transition:none; transition: none; opacity: .2;}
+#sec1 #content > div:nth-of-type(5) #backBtn:focus { outline:0; }
+
+#content > div.mask > div:nth-child(2) > div:last-child { height: 300px; }

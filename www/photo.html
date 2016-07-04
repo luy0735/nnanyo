@@ -8,25 +8,50 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/photo.css">
     <script src="components/loader.js"></script>
+    <script src="js/photo.js"></script>
     <script>
-        //
-        // TODO: Write JavaScript code here
-        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+ 
+        // PhoneGap is ready
+        function onDeviceReady() {
+     	// Do cool things here...
+            navigator.camera.cleanup();
+            
+        }
     </script>
 </head>
 <body>
+    
     <section id="sec1">
-        <div id="content">
-            <h1 class="text-center">사진등록</h1>
-            <p>보호할 대상의 사진을 등록해 주세요!</p>
-             
+      <div id="msg"><p>사진을 등록중입니다. 잠시만 기다려 주세요...<i class="fa fa-spinner" aria-hidden="true"></i></p><p id="progress"></p></div>
+      <div id="content">
+            <h1 class="text-center"><img src="img/text_03.png" width="70%" /></h1> 
             <div class="photoBtns">
-                <div><img src="img/icon02.png" /></div>
-                <div><img src="img/icon03.png" /></div>
+                <div>
+                <div id="shotImg"><img src="img/icon02.png" /></div>
+                <div id="getImg"><img src="img/icon03.png" /></div>
+                </div>
             </div>
             <div>
-                <img src="img/icon04.png" width="50%" />
+                <div>
+                    <div id="imageDiv">
+                        <img id="picture" src="img/icon04.png"  />
+                    </div>
+                    
+                    <div id="mask">
+                        <div></div>
+                        <div><img src="img/black.png" width="300px" /></div>
+                        <div></div>
+                    </div>
+                </div>
             </div>
+            <div class="btns">
+               
+                <ons-button class="button" id="submitBtn"><i class="fa fa-check" aria-hidden="true"></i> 등록 </ons-button>
+                <ons-button class="button" id="backBtn"><i class="fa fa-chevron-left" aria-hidden="true"></i> 이전 </ons-button>
+                   
+            </div>
+            <div><img src="img/copy.png" width="80%" /></div>
         </div>
     </section>
 </body>

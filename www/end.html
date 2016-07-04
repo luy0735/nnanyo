@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/end.css">
+    <script src="components/loader.js"></script>
+    <script src="js/end.js"></script>
+    <script>
+        document.addEventListener("deviceready", onDeviceReady, false);
+        var naverLink ;
+        
+        
+        
+        function onDeviceReady() {
+            
+            
+            
+          if (device.platform.indexOf("iOS")>-1) {
+              naverLink = "naversearchapp://search?qmenu=voicerecg&version=1";
+//              naverLink = "https://itunes.apple.com/kr/app/neibeo-naver/id393499958?mt=8";
+//              daumLink = "https://itunes.apple.com/kr/app/da-eum-daum/id365494029?mt=8";
+          } else if (device.platform.indexOf("Android")>-1) {
+     //           naverLink = "intent://qmenu=voicerecg&version=1#Intent;scheme=naversearchapp;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=com.nhn.android.search;end"
+ //               naverLink = "naversearchapp://search?qmenu=voicerecg&version=5";   
+                naverLink = "http://naverapp.naver.com/search/?qmenu=qrcode&version=5";
+         }
+          
+          if (naverLink) {
+//              document.getElementById("naverLinkBtn").setAttribute("href", naverLink);
+                 $("#naverLinkBtn").attr("href",naverLink);
+            }
+          
+        }
+    </script>
+</head>
+<body>
+    
+    <section id="sec1">
+        <div id="content" >
+            <h1 class="text-center"><img src="img/text_01.png" width="70%" /></h1>  
+        </div>
+        <div>
+            <img id="picture" src="img/icon04.png"  />
+        </div>
+         <div id="formBox">
+            <div>
+                <div><div><i class="fa fa-check" aria-hidden="true"></i></div><span> 주의하세요!</span></div>
+                <p>1. 캐릭터 QR 스티커는 1회성 소모품입니다.</p><p>꼭 필요하실 때 사용하시고 폐기하여 주세요~</p>
+            
+                <p>2. 개인정보보호를 위해 꼭 필요시에만 활성화하실 수 있습니다. APP화면에서 설정으로 이동하시면 활성/비활성 옵션을 사용하실 수 있습니다.</p>
+                <p>비활성화일 경우 QR코드 스캔시 정보가 보이지 않으니 주의해 주세요~</p>
+            </div>
+             <div class="btns">
+               
+                <a class="button" id="submitBtn" href="index.html"><i class="fa fa-check" aria-hidden="true"></i> 홈으로 이동 </a>
+                <a class="button" id="backBtn" href="setup.html"><i class="fa fa-chevron-left" aria-hidden="true"></i> 설정으로 이동 </a>
+                   
+            </div>
+           
+            <div class="btns2" >
+                <a class="button" id="naverLinkBtn" href="#" data-ios-scheme="naversearchapp" data-ios-query="search?qmenu=qrcode&amp;version=1" data-ios-install="393499958" data-android-scheme="naversearchapp" data-android-query="search?qmenu=qrcode&amp;version=1" data-android-package="com.nhn.android.search" ><i class="fa fa-check" aria-hidden="true"></i> 네이버앱에서 스캔하기 </a>
+                <!--<a class="button" id="naverLinkBtn" href="naversearchapp://" ><i class="fa fa-check" aria-hidden="true"></i> 네이버앱에서 스캔하기 </a>-->
+            </div>
+            <div class="btns2">
+                <a class="button" id="daumLinkBtn" href="#" data-ios-scheme="daumapps" data-ios-query="codeSearch" data-android-scheme="daumapps" data-android-query="codeSearch" data-android-package="net.daum.android.daum"><i class="fa fa-check" aria-hidden="true"></i> 다음앱에서 스캔하기 </a>
+            </div>
+         </div>
+         <div><img src="img/copy.png" width="80%" /></div>
+    </section>    
+    <div id="applinkDiv"></div>
+</body>
+</html>

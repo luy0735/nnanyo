@@ -11,29 +11,33 @@
     <script src="js/insert.js"></script>
 </head>
 <body>
+  
     <section id="sec1">
         <div id="content">
-            <h1 class="text-center">대상등록</h1>
+            <h1 class="text-center"><img src="img/text_04.png" width="70%" /></h1>
             <div id="formBox">
                 <div class="row">
-                    <div class="title"><i class="fa fa-circle" aria-hidden="true"></i> 유형선택 </div>
+                    <div class="title"><i class="fa fa-circle" aria-hidden="true"></i> 유형 </div>
+                    
                     <div class="inputCol">
-                        <select name="typeSel" id="typeSel" >
-                            <option value="">선택하세요</option>
-                        </select>
+                        <input type="hidden" name="typeCode" id="typeCode" />
+                        <input type="text" name="typeSel" id="typeSel" value="유형">
+                       
                     </div>
                 </div>
                 <div class="row">
                     <div>
                         <div class="title"><i class="fa fa-circle" aria-hidden="true"></i> 대상등록 </div>
                         <div class="inputCol">
-                            <input type="text" name="iName" id="iName" class="text-input" placeholder="이름을 입력하세요." />
+                            <label>이름</label>
+                            <input type="text" name="iName" id="iName" class="text-input required"  placeholder="이름을 입력하세요."  />
                         </div>
                     </div>
                     <div>
-                        <input type="number" name="iYear" id="iYear" placeholder="년도(4자리)" maxlength="4" />
-                        
-                        <select name="iMonth" id="iMonth">
+                        <label>년도</label>
+                        <input type="number" name="iYear" id="iYear" placeholder="년도(4자리)" class="required" maxlength="4" />
+                        <label>월</label>
+                        <select name="iMonth" id="iMonth" class="required">
                             <option>월</option>
                             <option value="01">1월</option>
                             <option value="02">2월</option>
@@ -48,32 +52,33 @@
                             <option value="11">11월</option>
                             <option value="12">12월</option>
                         </select>    
-                        <select name="iSex" id="iSex">
+                        <label>성별</label>
+                        <select name="iSex" id="iSex" class="required">
                             <option>성별</option>
-                            <option value="1">남자</option>
-                            <option value="2">여자</option>
+                            <option value="남">남자</option>
+                            <option value="여">여자</option>
                         </select>
                     </div>    
                 </div>
                 <div class="row">
                     <div ><i class="fa fa-circle" aria-hidden="true"></i> 대상특이사항 및 긴급정보 </div>
                     <div >
-                        <textarea name="iInfo" id="iInfo">
-                            
-                        </textarea>
+                        <textarea name="iInfo" id="iInfo" placeholder="※필요시에만 입력하세요"></textarea>
                     </div>    
                 </div>
                 <div class="row">
                     <div>
                         <div class="title"><i class="fa fa-circle" aria-hidden="true"></i> 보호자A </div>
                         <div class="inputCol">
-                            <select name="iProtector1" id="iProtector1">
+                            <label>보호자A</label>
+                            <select name="iProtector1" id="iProtector1" class="required">
                                 <option>선택</option>
                             </select>
                         </div>    
                     </div>
                     <div>
-                        <input type="tel" name="tel1" id="tel1" placeholder="전화번호 입력" />
+                        <label>전화번호</label>
+                        <input type="tel" name="tel1" id="tel1" placeholder="전화번호 입력" class="required tel" maxlength="11" />
                     </div>
                 </div>
                 <div class="row lastRow">
@@ -86,7 +91,7 @@
                         </div>    
                     </div>
                     <div>
-                        <input type="tel" name="tel2" id="tel2" placeholder="전화번호 입력" />
+                        <input type="tel" name="tel2" id="tel2" placeholder="전화번호 입력" class="tel" maxlength="11" />
                     </div>
                 </div>
                 <div class="row lastRow">

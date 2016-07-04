@@ -11,21 +11,37 @@
     <link rel="stylesheet" href="css/index.css">
   
     <script>
+//            function onDeviceReady() {
+//               var element = document.getElementById('deviceProperties');
+//                element.innerHTML = 'Device Model: '    + device.model    + '<br />' +
+//                                    'Device Cordova: '  + device.cordova  + '<br />' +
+//                                    'Device Platform: ' + device.platform + '<br />' +
+//                                    'Device UUID: '     + device.uuid     + '<br />' +
+//                                    'Device Version: '  + device.version  + '<br />';
+//            }
+  
     // PhoneGap event handler
         document.addEventListener("deviceready", onDeviceReady, false);
         
         function onDeviceReady() {
-            console.log("PhoneGap is ready");
-            
-            
-            
+            $.post("http://nnanyo.slit.co.kr/slit_lib/qList.cnt.php",{"uuid":device.uuid},function(data,txtStatus,jqXHR) {
+                if (data.cnt==0) {
+                    $("#setupBtn").css("display","none");
+                }
+            },"json");  
         }    
+        
     </script>
 </head>
 <body>
+   
+    
 	<section id="sec1">
+        <div id="intro">
+            <img src="img/intro1.jpg" width="100%" />
+        </div>
     	<div id="content">
-            <h1 class="text-center">인증코드!</h1>
+            <h1 class="text-center"><img src="img/text_07.png" width="70%" /></h1>
             <div><img src="img/character1.png" width="180px" /></div>
            <div id="formBox">
                 
@@ -39,7 +55,7 @@
                     </div>
                  </form>
            </div>
-           <div><img src="img/copy.png" width="80%" /></div>
+           <div><img src="img/copy.png" width="50%" /></div>
         </div>
 	</section>
 </body>

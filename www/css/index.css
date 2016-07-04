@@ -1,13 +1,18 @@
 /* This is a CSS file */
-
+body { overflow:hidden; }
+#sec1 #intro {text-align: center;z-index: 9; }
+#sec1 {height: 100%; background-color:#ffcb73; overflow-y:scroll; }
+#sec1 #content { display: none; text-align: center;  }
 #sec1 #content div:first-of-type { height: 100px; margin-top:0; }
-#sec1 #content #formBox { width:300px; min-height: 160px; background-color:#FFF; border-radius: 20px;padding:20px; }
+#sec1 #content #formBox { width:300px; min-height: 160px; background-color:#FFF; border-radius: 20px;padding:20px; margin:0 auto; }
 #sec1 #content #formBox #frm1 { width:100%; text-align: center; }
 #sec1 #content #formBox #frm1 #qrCode { width:90%; height: 50px; border:none; background-color:#e5e6e7; border-radius: 30px; text-align: center; font-size: 1.2em; color:#454545; font-weight: 600; }
-#sec1 #content #formBox #frm1 div:first-of-type {height: 30px; line-height: 30px; padding:20px 0; }
+#sec1 #content #formBox #frm1 div:first-of-type {height: 30px; line-height: 30px; padding:20px 0; font-size:14px; }
 #sec1 #content #formBox #frm1 div.btns ons-button { width:120px; height: 50px; line-height: 40px; justify-content: space-between; font-size:1.2em; text-align: center; border-radius: 10px;}
 #sec1 #content #formBox #frm1 div.btns #setupBtn { background-color:#eb482f;}
 #sec1 #content #formBox #frm1 div.btns #setupBtn:hover { -webkit-transition:none;-moz-transition:none; -o-transition:none; transition: none; }
 #sec1 #content #formBox #frm1 div.btns #setupBtn:active { background-color:#eb482f; -webkit-transition:none; -moz-transition:none; -o-transition:none; transition: none; opacity: .2;}
 #sec1 #content #formBox #frm1 div.btns #setupBtn:focus { outline:0; }
+
+
 

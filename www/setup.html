@@ -8,18 +8,76 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/setup.css">
     <script src="components/loader.js"></script>
+  
     <script>
-        //
-        // TODO: Write JavaScript code here
-        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+        
+        function alertDismissed() {
+            
+        }
+        
+        function onDeviceReady() {
+     //       console.log(device.uuid);    
+            $.post("http://nnanyo.slit.co.kr/slit_lib/qList.php",{"uuid":device.uuid},function(data,txtStatus,jqXHR) {
+                
+                $("#regInfo").html(data);
+            },"html");
+            
+            $("#regInfo").on("click",".activeBtn",function() {
+                var wr_id = $(this).closest(".iRow").attr("data-title");
+                console.log(wr_id);
+                if ($(this).hasClass("active")) {
+                    
+                     navigator.notification.alert("비활성화일 경우 QR코드 스캔시 정보가 보이지 않으니 주의해 주세요~",alertDismissed,"NNANYO.COM"," 확 인 ");
+                    
+                    $(this).removeClass("active").addClass("inactive").find("img").attr("src","http://nnanyo.slit.co.kr/img/btn06.png");
+                    
+                    $.post("http://nnanyo.slit.co.kr/slit_lib/setup.php",{"wr_id":wr_id,"active":"F"},function(data,txtStatus,jqXHR){
+                        console.log(data);
+                    })
+                } else {
+                    $(this).removeClass("inactive").addClass("active").find("img").attr("src","http://nnanyo.slit.co.kr/img/btn04.png");
+                    
+                    $.post("http://nnanyo.slit.co.kr/slit_lib/setup.php",{"wr_id":wr_id,"active":"T"},function(data,txtStatus,jqXHR){
+                        console.log(data);
+                    })
+                }
+            });
+            
+     
+            function confirmCallBack(button) {
+                if (button==1) {
+                    var wr_id = $(".beDel").attr("data-title");
+                   $.post("http://nnanyo.slit.co.kr/slit_lib/del.php",{"wr_id":wr_id},function(data,txtStatus,jqXHR) {
+                        console.log(data);
+                        $(".beDel").remove();
+                    }) 
+                }    
+            }
+            
+            $("#regInfo").on("click",".delBtn",function() {
+                var m = $(this).closest(".iRow");
+                m.addClass("beDel");
+                
+                navigator.notification.confirm("정말 삭제하시겠습니까?", confirmCallBack, "Nnanyo", " 삭제 , 취소 ");
+                
+                
+            })
+            
+        }    
+        
     </script>
 </head>
 <body>
+   
    <section id="sec1">
     <div id="content">
-            <h1 class="text-center">설정하기</h1>
+            <h1 class="text-center"><img src="img/text_05.png" width="70%" /></h1>
              <div id="formBox">
-             <a href="index.html" id="goHomeBtn" rel="back" class="button"><i class="fa fa-chevron-left" aria-hidden="true"></i> 뒤로이동 </a>
+                <div id="regInfo">
+                    
+                </div>
+                <a href="index.html" id="goHomeBtn" rel="back" class="button"><i class="fa fa-chevron-left" aria-hidden="true"></i> 뒤로이동 </a>
              </div>
              <div><img src="img/copy.png" width="80%" /></div>
     </div>        
